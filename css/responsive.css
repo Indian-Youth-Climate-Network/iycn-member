@@ -326,7 +326,7 @@
  
 /* small mobile :320px. */
 @media (max-width: 767px) {
-	.container {width: 90%;}
+	.container {width: 95%;}
 	.main-menu-area{
 		display:none;
 	}
@@ -522,8 +522,8 @@
 		padding: 20px 20px;
 	}
 	.modal-dialog.modals-default, .modal-dialog.modal-sm, .modal-dialog.modal-large {
-		width: 288px;
-		margin: 50px 70px;
+		width: 90%;
+    	margin: 50px auto;
 	}
 	.popover-wp {
 		padding: 15px 15px;

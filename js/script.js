@@ -10,14 +10,12 @@ else {
             console.log({data, status})
             data.data.map((member) => {
                 let dom = `
-                    <tr>
+                    <tr id="member_${member.uid}">
                         <td>${member.name}</td>
-                        <td><a href="tel:${member.phone}">${member.phone}</a></td>
-                        <td><a href="mailto:${member.email_id}">${member.email_id}</a></td>
                         <td>${member.city}</td>
                         <td>${member.state}</td>
                         <td>${member.country}</td>
-                        <td>${member.about}</td>
+                        <td><button class="btn btn-primary" onClick="about('member_${member.uid}')">Read More</button><div class="member_about"><h2>About - ${member.name}</h2><p>${member.about}</p><p><b>Email- </b> ${member.email_id}<br><b>Mobile-</b> ${member.phone}</p></div></td>
                     </tr>
                 `
                 $("#member_data").append(dom)
@@ -57,4 +55,9 @@ function logout() {
     localStorage.removeItem("token");
     localStorage.removeItem("user_id");
     window.location = "/"
+}
+
+function about(id) {
+    $("#modal_about").html($(`#${id} .member_about`).html())
+    $("#myModalone").modal()
 }

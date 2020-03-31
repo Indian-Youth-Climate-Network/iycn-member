@@ -58,6 +58,11 @@
     <!-- modernizr JS
 		============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        .member_about, .member_phone, .member_email {
+            display: none;
+        } 
+    </style>
 </head>
 
 <body>
@@ -147,8 +152,6 @@
                                 <thead>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Phone</th>
-                                        <th>Email</th>
                                         <th>City</th>
                                         <th>State</th>
                                         <th>Country</th>
@@ -159,6 +162,24 @@
                             </table>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="myModalone" role="dialog">
+        <div class="modal-dialog modals-default">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" id="modal_about">
+                    <h2>About - Name</h2>
+                    <p>Curabitur blandit mollis lacus. Nulla sit amet est. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Cras sagittis.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
